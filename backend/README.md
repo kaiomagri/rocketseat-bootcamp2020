@@ -16,7 +16,7 @@
 </p>
 
 
-## Sobre a Aplicação
+## :gobarber-sobre-a-aplicação: Sobre a Aplicação
 
 A aplicação desenvolvida é um gerenciador de agendamentos de uma barbearia, o **GoBarber**. Essa aplicação consiste em um API em NodeJs que tem por finalidade cadastrar usuários/prestadores de serviços e realizar agendamentos.
 
