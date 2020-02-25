@@ -11,12 +11,12 @@
 </h3>
 
 <p align="center">
-  <a href="#gobarber-sobre-a-aplicação">Sobre a Aplicação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#gobarber-como-rodar">Como rodar</a>
+  <a href="#sobre-a-aplicação">Sobre a Aplicação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#como-rodar">Como rodar</a>
 </p>
 
 
-## :gobarber-sobre-a-aplicação: Sobre a Aplicação
+# Sobre a Aplicação
 
 A aplicação desenvolvida é um gerenciador de agendamentos de uma barbearia, o **GoBarber**. Essa aplicação consiste em um API em NodeJs que tem por finalidade cadastrar usuários/prestadores de serviços e realizar agendamentos.
 
@@ -39,7 +39,7 @@ _ Docker
 - Sentry
 - Bee-queue
 
-## Como rodar
+# Como rodar
 
 #### para a utilização dos bancos, o arquivo de environment (.env) deve ser preenchido.
 
