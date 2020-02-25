@@ -16,7 +16,7 @@
 </p>
 
 
-## :gobarber: Sobre a Aplicação
+## Sobre a Aplicação
 
 A aplicação desenvolvida é um gerenciador de agendamentos de uma barbearia, o **GoBarber**. Essa aplicação consiste em um API em NodeJs que tem por finalidade cadastrar usuários/prestadores de serviços e realizar agendamentos.
 
@@ -39,7 +39,7 @@ _ Docker
 - Sentry
 - Bee-queue
 
-## :gobarber: Como rodar
+## Como rodar
 
 #### para a utilização dos bancos, o arquivo de environment (.env) deve ser preenchido.
 
