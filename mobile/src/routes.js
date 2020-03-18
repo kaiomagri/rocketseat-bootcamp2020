@@ -1,4 +1,5 @@
 import React from 'react';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
@@ -6,6 +7,7 @@ import SignIn from '~/pages/SignIn';
 import SignUp from '~/pages/SignUp';
 
 import Dashboard from '~/pages/Dashboard';
+import Profile from '~/pages/Profile';
 
 const Stack = createStackNavigator();
 const Tabs = createBottomTabNavigator();
@@ -27,7 +29,26 @@ export default function createRouter(isSigned = false) {
         keyboardHidesTabBar: true,
       }}
     >
-      <Tabs.Screen name="Dashboard" component={Dashboard} />
+      <Tabs.Screen
+        name="Dashboard"
+        component={Dashboard}
+        options={{
+          tabBarLabel: 'Agendamentos',
+          tabBarIcon: ({ color }) => (
+            <Icon name="event" size={20} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="Profile"
+        component={Profile}
+        options={{
+          tabBarLabel: 'Meu Perfil',
+          tabBarIcon: ({ color }) => (
+            <Icon name="person" size={20} color={color} />
+          ),
+        }}
+      />
     </Tabs.Navigator>
   );
 }
