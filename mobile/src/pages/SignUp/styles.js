@@ -4,10 +4,7 @@ import styled from 'styled-components/native';
 import Input from '~/components/Input';
 import Button from '~/components/Button';
 
-export const Container = styled.KeyboardAvoidingView.attrs({
-  enable: Platform.OS === 'ios',
-  behavior: 'padding',
-})`
+export const Container = styled.KeyboardAvoidingView.attrs()`
   flex: 1;
   justify-content: center;
   align-items: center;
