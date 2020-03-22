@@ -6,6 +6,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import SignIn from '~/pages/SignIn';
 import SignUp from '~/pages/SignUp';
 
+import NewStack from '~/pages/New';
+
 import Dashboard from '~/pages/Dashboard';
 import Profile from '~/pages/Profile';
 
@@ -36,6 +38,18 @@ export default function createRouter(isSigned = false) {
           tabBarLabel: 'Agendamentos',
           tabBarIcon: ({ color }) => (
             <Icon name="event" size={20} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="New"
+        component={NewStack}
+        options={{
+          unmountOnBlur: true,
+          tabBarVisible: false,
+          tabBarLabel: 'Agendar',
+          tabBarIcon: ({ color }) => (
+            <Icon name="add-circle-outline" size={20} color={color} />
           ),
         }}
       />

@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
+import { withNavigationFocus } from '@react-navigation/compat';
 
 import api from '~/services/api';
 
@@ -7,22 +9,22 @@ import Appointment from '~/components/Appointment';
 
 import { Container, Title, List } from './styles';
 
-export default function Dashboard() {
+function Dashboard({ isFocused }) {
   const [appointments, setAppointments] = useState([]);
 
-  useEffect(() => {
-    async function loadAppointments() {
-      const response = await api.get('/appointments');
-      setAppointments(response.data);
-    }
+  async function loadAppointments() {
+    const response = await api.get('/appointments');
+    setAppointments(response.data);
+  }
 
-    loadAppointments();
-  }, []);
+  useEffect(() => {
+    if (isFocused) {
+      loadAppointments();
+    }
+  }, [isFocused]);
 
   async function handleCancel(id) {
     const response = await api.delete(`appointments/${id}`);
-
-    console.tron.warn('ENTROU');
 
     setAppointments(
       appointments.map(appointment =>
@@ -51,3 +53,9 @@ export default function Dashboard() {
     </Background>
   );
 }
+
+export default withNavigationFocus(Dashboard);
+
+Dashboard.propTypes = {
+  isFocused: PropTypes.bool.isRequired,
+};
